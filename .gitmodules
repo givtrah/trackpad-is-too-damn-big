@@ -1,0 +1,3 @@
+[submodule "external/simple-cmd-parser"]
+	path = external/simple-cmd-parser
+	url = https://github.com/tascvh/simple-cmd-parser.git

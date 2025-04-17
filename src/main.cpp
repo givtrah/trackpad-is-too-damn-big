@@ -7,7 +7,7 @@
 #include "devices.hpp"
 #include "event_filters.hpp"
 #include "event_handlers.hpp"
-#include "simple_parser.hpp"
+#include "../external/simple-cmd-parser/simple_cmd_parser.hpp"
 #include <iostream>
 #include <optional>
 
