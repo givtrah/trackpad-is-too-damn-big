@@ -16,6 +16,8 @@ You can build TITDB with the following commands
 ```bash
 git clone https://github.com/tascvh/trackpad-is-too-damn-big.git
 cd trackpad-is-too-damn-big
+git submodule init
+git submodule update
 mkdir build
 cd build
 cmake ..
