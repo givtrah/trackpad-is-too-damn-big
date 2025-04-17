@@ -10,3 +10,22 @@ Trackpad Is Too Damn Big (TITDB) is a utility designed to customize trackpad beh
 
 ## Troubleshooting
 Because TITDB prevents other applications from receiving events from the original device, applications that specifically monitor the original device will not work as intended while TITDB is running. This can be easily resolved by configuring the applications to monitor the virtual device that TITDB creates instead of the original device.
+
+## Building
+You can build TITDB with the following commands 
+```bash
+git clone https://github.com/tascvh/trackpad-is-too-damn-big.git
+cd trackpad-is-too-damn-big
+mkdir build
+cd build
+cmake ..
+make
+```
+
+## Running 
+
+```bash
+sudo  titdb -d /dev/input/event0
+```
+Replace /dev/input/event0 with your trackpad device filename if necessary
+
