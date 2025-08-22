@@ -54,7 +54,7 @@ public:
       throw std::runtime_error("Failed to get slot info");
     }
     m_num_slot_max = ai->maximum;
-    m_slot_coordinates.reserve(m_num_slot_max);
+    m_slot_coordinates.resize(m_num_slot_max);
 
     ai = libevdev_get_abs_info(dev, ABS_X);
     if (!ai) {
@@ -145,7 +145,7 @@ public:
     auto delta_y = m_dev_top - m_dev_bottom;
     m_diagonal_sq = delta_x * delta_x + delta_y * delta_y;
     m_set_slots.reserve(m_num_slot_max);
-    m_slot_valid.reserve(m_num_slot_max);
+    m_slot_valid.resize(m_num_slot_max);
   }
 
   void processEvents(std::vector<input_event> &event_buffer) noexcept {
